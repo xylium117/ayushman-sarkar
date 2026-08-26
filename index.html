@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Ayushman Sarkar - Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Ayushman Sarkar, Statistics student at St. Xavier's College, Kolkata, India. A personal recollection of projects and testimonials.">
+  <meta name="keywords" content="Ayushman Sarkar, SXC Stat., Statistics student, Portfolio">
+  <meta name="author" content="Ayushman Sarkar">
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="Ayushman Sarkar - Portfolio">
+  <meta property="og:description" content="Explore projects, testimonials, and research by Ayushman Sarkar.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/project_quantumcode.png">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Stylesheets & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Animated Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Top Scroll Laser Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Background Interactive Warm Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Warm Ambient Glow Overlays -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Full-Screen Interactive FX Overlays -->
+  <canvas id="confetti-canvas"></canvas>
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notification"></div>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-link" id="nav-logo">
+        <div class="logo-badge">AS</div>
+        <span class="logo-text">Ayushman Sarkar<span style="color:var(--accent-amber)">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links-menu">
+        <li><a href="#about" class="nav-item-link">About</a></li>
+        <li><a href="#journey" class="nav-item-link">Journey</a></li>
+        <li><a href="#projects" class="nav-item-link">Projects</a></li>
+        <li><a href="#skills" class="nav-item-link">Skills</a></li>
+        <li><a href="#terminal" class="nav-item-link">Terminal</a></li>
+        <li><a href="#achievements" class="nav-item-link">Honors</a></li>
+        <li><a href="#contact" class="nav-item-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Audio Synthesizer Toggle -->
+        <button id="audio-toggle-btn" class="audio-btn active" title="Audio FX: ON (Click to Mute)"
+          aria-label="Toggle Sound Effects">
+          <div class="sound-waves">
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+          </div>
+          <span>Audio</span>
+        </button>
+
+        <!-- Theme Switcher Button (2 Warm Themes) -->
+        <button id="theme-toggle-btn" class="theme-btn" title="Toggle Theme (Dark / Light) [Shortcut: T]"
+          aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+
+        <!-- CTA Connect -->
+        <a href="#contact" class="btn-cta-nav">Let's Connect</a>
+
+        <!-- Mobile Menu Toggle Button (Animated Morphing 3-Bar / X) -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" title="Toggle Menu" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section (Clean, Bold, Warm & Eye-Catching)
+       ========================================================================== -->
+  <section class="hero-section" id="about">
+    <!-- Interactive Mouse Spotlight Aura -->
+    <div class="hero-interactive-spotlight"></div>
+
+    <div class="container hero-grid">
+
+      <!-- Left Hero Content -->
+      <div class="hero-content">
+        <div class="hero-greeting-capsule reveal-on-scroll">
+          <span class="sun-pulse-dot"></span>
+          <span id="hero-dynamic-greeting"><i class="fa-solid fa-hand"></i> Hello</span>
+        </div>
+
+        <h1 class="hero-title reveal-on-scroll reveal-delay-1">
+          Projects, <br><span class="serif-accent">Experiments, </span> <br>
+          <span class="gradient-text-shimmer">Explorations.</span>
+        </h1>
+
+        <div class="typewriter-container reveal-on-scroll reveal-delay-2">
+          <span>&gt;&nbsp;</span>
+          <span id="typewriter-text"></span>
+          <span class="cursor-blink"></span>
+        </div>
+
+        <p class="hero-bio reveal-on-scroll reveal-delay-2">
+          Hi! I'm <strong>Ayushman Sarkar</strong>, a first-year undergraduate student studying
+          <strong>Statistics</strong> at
+          <strong>St. Xavier's College, Kolkata, India</strong>. I'm passionate about building, designing, and bringing
+          ideas to life through code and creativity.
+        </p>
+
+        <div class="hero-actions reveal-on-scroll reveal-delay-3">
+          <a href="#projects" class="btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#terminal" class="btn-secondary">
+            <span>Launch CLI Terminal</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="4 17 10 11 4 5" />
+              <line x1="12" y1="19" x2="20" y2="19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Telemetry Stats Row -->
+        <div class="hero-stats-row reveal-on-scroll reveal-delay-4">
+          <div class="stat-item">
+            <span class="stat-number">99.4 (AIR 3)</span>
+            <span class="stat-label">ICSE '24</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.5 (AIR 3)</span>
+            <span class="stat-label">ISC '26</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2x</span>
+            <span class="stat-label">Hackathon Champ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Hero 3D Profile Card -->
+      <div class="hero-visual reveal-on-scroll reveal-delay-2">
+        <div class="avatar-card-3d" id="avatar-card" title="Click for a burst of sparks!">
+          <div class="avatar-img-wrapper">
+            <img src="assets/images/avatar.jpg" alt="Ayushman Sarkar - Statistics Student" />
+          </div>
+          <div class="avatar-card-footer">
+            <div class="avatar-student-info">
+              <h4>Ayushman Sarkar</h4>
+              <p>B.Sc Stat '26 @ SXC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Glassmorphic HUD Badges -->
+        <!--
+        <div class="floating-hud-badge hud-bottom-right">
+          <span style="color:var(--accent-coral)"><i class="fa-solid fa-trophy"></i></span>
+          <span>2nd Place @ BITM Innovation Fest</span>
+        </div>
+        -->
+      </div>
+
+    </div>
+
+    <!-- Scroll Down Cue Indicator -->
+    <a href="#journey" class="scroll-cue" aria-label="Scroll down to journey section">
+      <div class="mouse-scroll-icon">
+        <div class="mouse-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </a>
+  </section>
+
+  <!-- ==========================================================================
+       Academic & Professional Journey (Timeline)
+       ========================================================================== -->
+  <section class="timeline-section" id="journey">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-pill">Experience & Education</div>
+        <h2 class="section-title">Academic Journey</h2>
+        <p class="section-subtitle">A chronological track of academic projects, personal experiments, and
+          foundational milestones.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Track Background & Fill -->
+        <div class="timeline-track-bg"></div>
+        <div class="timeline-track-fill"></div>
+
+        <!-- Milestone 1 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2026 — PRESENT</span>
+            <h3 class="timeline-role">B.Sc. Statistics</h3>
+            <h4 class="timeline-org">St. Xavier's College, Kolkata</h4>
+            <p class="timeline-desc">Pursuing undergraduate studies in statistics while exploring computing, design, and
+              interactive systems.</p>
+            <div class="timeline-tags">
+              <span class="tag-pill">Statistics</span>
+              <span class="tag-pill">Class of 2030</span>
+              <span class="tag-pill">Interdisciplinary</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2026</span>
+            <h3 class="timeline-role">ISC Class 12 Board Examinations</h3>
+            <h4 class="timeline-org">CISCE</h4>
+            <p class="timeline-desc">Secured All India Rank 3 with perfect scores in mathematics, physics, chemistry,
+              and computer science.</p>
+            <div class="timeline-tags">
+              <span class="tag-pill">AIR 3</span>
+              <span class="tag-pill">99.5%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024</span>
+            <h3 class="timeline-role">ICSE Class 10 Board Examinations</h3>
+            <h4 class="timeline-org">CISCE</h4>
+            <p class="timeline-desc">Ranked among the top students nationwide with perfect scores in mathematics, and
+              computer science.</p>
+            <div class="timeline-tags">
+              <span class="tag-pill">AIR 3</span>
+              <span class="tag-pill">99.4%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-item reveal-on-scroll">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2019</span>
+            <h3 class="timeline-role">BITM Innovation Fest</h3>
+            <h4 class="timeline-org">Birla Industrial and Technological Museum</h4>
+            <p class="timeline-desc">Achieved Second place in Junior category in a prestigious multi-disciplinary
+              innovation festival.</p>
+            <div class="timeline-tags">
+              <span class="tag-pill">Innovation</span>
+              <span class="tag-pill">Prototyping</span>
+              <span class="tag-pill">Teamwork</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Featured Projects Section
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-pill">Portfolio Showcase</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Interactive web systems, research prototypes, and open-source software engineered
+          for real-world impact.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="projects-filter-bar reveal-on-scroll">
+        <button class="filter-btn active" data-category="all">All Projects (1)</button>
+        <button class="filter-btn" data-category="systems">Systems & WebGL</button>
+        <button class="filter-btn" data-category="ai">AI & Neural Tech</button>
+        <button class="filter-btn" data-category="creative">Creative Tech & 3D</button>
+      </div>
+
+      <!-- Projects Grid (Populated via JS) -->
+      <div class="projects-grid" id="projects-grid-container"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Skills & Technical Matrix
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-pill">Capabilities & Toolset</div>
+        <h2 class="section-title">Skills & Proficiencies</h2>
+        <p class="section-subtitle">Core programming languages, machine learning frameworks, graphics pipelines, and
+          systems tools.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Left: Categorized Skill Meters -->
+        <div class="skills-meters-column">
+
+          <!-- Category 1 -->
+          <div class="skills-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+              <h3 class="category-title">Core Languages</h3>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Java</span><span class="skill-percentage">96%</span>
+              </div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="96"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>TypeScript / JavaScript </span><span class="skill-percentage">68%</span>
+              </div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="68"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Python</span><span class="skill-percentage">75%</span></div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>HTML / CSS (WebDev)</span><span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skills-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3 class="category-title">AI, Graphics & Systems</h3>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Deep Learning (PyTorch, TensorFlow)</span><span
+                  class="skill-percentage">17%</span></div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="17"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>WebGL, Three.js & Blender</span><span class="skill-percentage">62%</span>
+              </div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="62"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Firebase & Docker</span><span class="skill-percentage">44%</span></div>
+              <div class="skill-meter-bg">
+                <div class="skill-meter-fill" data-width="44"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Radar Chart & Physics Chip Cloud -->
+        <div class="skills-interactive-container reveal-on-scroll reveal-delay-2">
+          <h3 class="interactive-hud-title">Holistic Capability Matrix</h3>
+          <p class="interactive-hud-subtitle">Competency balance across software engineering disciplines</p>
+
+          <canvas id="skills-radar-canvas"></canvas>
+
+          <p style="font-size:0.85rem; font-family:var(--font-mono); color:var(--text-muted); margin-bottom:14px;">
+            Interactive Tech Stack Chips (Click to interact):
+          </p>
+          <div class="interactive-chips-cloud">
+            <span class="physics-chip"><i class="fa-brands fa-react"></i> React</span>
+            <span class="physics-chip"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="physics-chip"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="physics-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="physics-chip"><i class="fa-solid fa-fire"></i> Firebase</span>
+            <span class="physics-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+            <span class="physics-chip"><i class="fa-solid fa-palette"></i> Blender</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Developer Terminal Section
+       ========================================================================== -->
+  <section class="terminal-section" id="terminal">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-pill">Interactive CLI</div>
+        <h2 class="section-title">Developer Terminal</h2>
+        <p class="section-subtitle">Type commands to inspect credentials, projects, or trigger
+          hiring protocol.</p>
+      </div>
+
+      <div class="terminal-wrapper reveal-on-scroll" id="hacker-terminal">
+        <!-- Terminal Titlebar -->
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="terminal-title">ayushman@sxc: ~ (zsh)</div>
+          <div class="terminal-status-badge">SSH-SESSION // ACTIVE</div>
+        </div>
+
+        <!-- Fast Command Action Bar -->
+        <div class="terminal-chips-bar">
+          <span>Quick Commands:</span>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='dino'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">dino</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='pong'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">pong</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='chess'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">chess</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='about'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">about</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='projects'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">projects</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='gpa'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">gpa</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='awards'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">awards</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='matrix'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">matrix</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='sudo hire'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">sudo
+            hire</button>
+          <button class="quick-cmd-pill"
+            onclick="document.querySelector('.terminal-input').value='clear'; document.querySelector('.terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">clear</button>
+        </div>
+
+        <!-- Terminal Body & History Buffer -->
+        <div class="terminal-body">
+          <div class="terminal-output"></div>
+          <div class="terminal-input-row">
+            <span class="term-prompt">ayushman@sxc:~$</span>
+            <input type="text" class="terminal-input"
+              placeholder="Type a command (e.g. 'help', 'projects', 'sudo hire')..." spellcheck="false"
+              autocomplete="off" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Honors & Bento Awards Section
+       ========================================================================== -->
+  <section class="achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-pill">Recognitions & Honors</div>
+        <h2 class="section-title">Awards & Leadership</h2>
+        <p class="section-subtitle">Competitive hackathons, academic distinctions, and research honors.</p>
+      </div>
+
+      <div class="awards-bento-grid">
+        <div class="bento-award-card">
+          <div class="bento-icon-glow"><i class="fa-solid fa-star"></i></div>
+          <h3 class="bento-award-title">AIR 3</h3>
+          <div class="bento-award-org">CISCE '24 & '26</div>
+          <p class="bento-award-desc">Achieved AIR 3 with a perfect 100% score in Mathematics, Physics, Chemistry, and
+            Computer Science in 2026, following perfect scores in Mathematics and Computer Science in 2024.</p>
+        </div>
+
+        <div class="bento-award-card">
+          <div class="bento-icon-glow"><i class="fa-solid fa-trophy"></i></div>
+          <h3 class="bento-award-title">2nd Place <br>(Junior category)</h3>
+          <div class="bento-award-org">BITM Innovation Festival 2019</div>
+          <p class="bento-award-desc">Awarded for a hydrauling 3-joint crane model, built using recyclable materials.
+          </p>
+        </div>
+
+        <div class="bento-award-card">
+          <div class="bento-icon-glow"><i class="fa-solid fa-medal"></i></div>
+          <h3 class="bento-award-title">1st Place <br>(Junior category)</h3>
+          <div class="bento-award-org">PBKS Science Fest 2023</div>
+          <p class="bento-award-desc">Awarded for a sunflower-inspired solar panel prototype that achieves exceptional
+            efficiency. </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Section
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-pill">Get In Touch</div>
+        <h2 class="section-title">Let's Build Something Together</h2>
+        <p class="section-subtitle">Looking for Summer / Fall internship opportunities, research collaborations, or
+          open-source projects.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Direct Info -->
+        <div class="contact-info-card reveal-on-scroll">
+          <h3 class="contact-heading">Direct Contact</h3>
+          <p class="contact-text">
+            I'm always happy to connect—whether you'd like to discuss research, collaboration, or just share ideas.
+          </p>
+
+          <div class="contact-direct-items">
+            <div class="direct-item">
+              <div class="direct-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="direct-meta">
+                <h5>Location</h5>
+                <p>Kolkata, India</p>
+              </div>
+            </div>
+            <div class="direct-item">
+              <div class="direct-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="direct-meta">
+                <h5>University</h5>
+                <p>St. Xavier's College (B.Sc. Statistics)</p>
+              </div>
+            </div>
+            <div class="direct-item">
+              <div class="direct-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="direct-meta">
+                <h5>Email Address</h5>
+                <p>ayushman.sarkar@outlook.com</p>
+              </div>
+            </div>
+          </div>
+
+          <button id="copy-email-btn" class="copy-email-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span>Copy Email to Clipboard</span>
+          </button>
+        </div>
+
+        <!-- Right: Glassmorphism Contact Form -->
+        <div class="contact-form-card reveal-on-scroll reveal-delay-2">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. name@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Subject / Role</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Internship / Collaboration"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-textarea"
+                placeholder="Hi, we came across your projects and would love to chat about..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">
+              <span>Send Message <i class="fa-solid fa-paper-plane"></i></span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="logo-link">
+          <div class="logo-badge">AS</div>
+          <span>Ayushman Sarkar.dev</span>
+        </a>
+
+        <div class="footer-socials">
+          <a href="https://github.com/xylium117" target="_blank" class="social-icon-btn" title="GitHub Profile"
+            aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ayushman-sarkar-354261414/" target="_blank" class="social-icon-btn"
+            title="LinkedIn Profile" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon-btn" title="Twitter / X Profile"
+            aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ayushman Sarkar. Built with passion and purpose. SXC Statistics.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Project Deep Dive Modal Drawer
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal-backdrop">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Modal"><i
+          class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="Project Visual" id="modal-img" class="modal-hero-img" />
+
+      <div class="modal-content-inner">
+        <h2 class="modal-project-title" id="modal-title"></h2>
+        <p class="modal-project-tagline" id="modal-tagline"></p>
+
+        <!-- Metrics Grid -->
+        <div class="modal-metrics-grid" id="modal-metrics-list"></div>
+
+        <h4 class="modal-section-h4">System Overview</h4>
+        <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:20px;" id="modal-overview"></p>
+
+        <h4 class="modal-section-h4">Key Engineering Highlights</h4>
+        <ul class="modal-bullet-list" id="modal-highlights-list"></ul>
+
+        <h4 class="modal-section-h4">Technologies Used</h4>
+        <div class="project-tech-stack" id="modal-tech-list"></div>
+
+        <div class="modal-actions-row">
+          <a href="#" target="_blank" id="modal-demo-link" class="btn-primary">
+            <span>View Source & Docs</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" id="modal-github-link" class="btn-secondary">
+            <span>GitHub Repository</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/runner.js"></script>
+  <script src="js/pong.js"></script>
+  <script src="js/chess.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
