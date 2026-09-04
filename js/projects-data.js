@@ -67,5 +67,46 @@ window.PROJECTS_DATA = [
       demo: "https://xylium117.github.io/quantumcode/",
       github: "https://github.com/xylium117/quantumcode"
     }
+  },
+  {
+    id: "ecopulse",
+    title: "EcoPulse",
+    tagline: "Planetary climate analytics engine with multi-spectral vegetation tracking, carbon flux anomaly alerts & deep learning wildfire segmentation",
+    category: "ai",
+    categoryLabel: "Climate & Geospatial AI",
+    image: "assets/images/project_ecopulse.jpg",
+    featured: false,
+    stats: {
+      resolution: "10m Resolution",
+      sensors: "Sentinel-2 & Landsat",
+      model: "Spatio-Temporal U-Net"
+    },
+    tags: [
+      "Python",
+      "FastAPI",
+      "TensorFlow",
+      "Google Earth Engine",
+      "Leaflet",
+      "Mapbox GL",
+      "Remote Sensing"
+    ],
+    overview: "An interactive planetary climate analytics engine and environmental monitoring platform featuring multi-spectral NDVI/NDWI tracking, real-time carbon flux anomaly detection, agricultural drought risk modeling (VCI), and spatio-temporal deep learning burn scar segmentation over Sentinel-2 and Landsat imagery.",
+    highlights: [
+      "Developed Spatio-Temporal U-Net with ConvLSTM2D bottlenecks to segment wildfire burn scars and canopy loss across multi-spectral temporal granules.",
+      "Integrated Google Earth Engine API with high-fidelity deterministic synthetic fallback for real-time NDVI, NDWI, and carbon flux time series analysis.",
+      "Built dynamic XYZ raster tile streaming pipeline generating real-time multi-spectral planetary overlays (NDVI, carbon flux, drought VCI, burn scars).",
+      "Engineered dual-engine geospatial UI combining zero-key Open Satellite Leaflet rendering with Mapbox 3D atmospheric globe visualizations."
+    ],
+    metrics: [
+      { label: "Spatial Resolution", value: "10m / 30m", detail: "Sentinel-2 MSI & Landsat-8/9 OLI reflectance" },
+      { label: "Tile Stream Latency", value: "< 32ms", detail: "Dynamic XYZ multi-spectral raster streaming" },
+      { label: "Planetary Coverage", value: "4,280 Mha", detail: "8 global biomes across major forest basins" },
+      { label: "Model Inference", value: "~120ms", detail: "Spatio-temporal U-Net burn scar segmentation" },
+      { label: "Anomaly Sensitivity", value: "±2.0σ Z-Score", detail: "Statistical anomaly flagging against seasonal baselines" }
+    ],
+    links: {
+      demo: "https://xylium117.github.io/ecopulse/",
+      github: "https://github.com/xylium117/ecopulse"
+    }
   }
 ];
