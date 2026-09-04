@@ -223,12 +223,13 @@ Passionate about building, designing, and bringing creative engineering projects
   }
 
   cmdProjects() {
+    if (window.PROJECTS_DATA && window.PROJECTS_DATA.length > 0) {
+      const list = window.PROJECTS_DATA.map((p, i) => `${i + 1}. <span class='term-highlight'>${p.title}</span> — ${p.tagline}`).join("<br>");
+      return `${list}<br><br>Tip: Click any project card on the page to view detailed live interactive modal!`;
+    }
     return `
-1. <span class='term-highlight'>AetherOS</span> — Web Spatial OS & AI Desktop
-2. <span class='term-highlight'>NeuroVision</span> — Neural Signal Classifier & Visualizer
-3. <span class='term-highlight'>OmniGraph</span> — Semantic Knowledge Graph Universe
-4. <span class='term-highlight'>QuantumCode</span> — Interactive Bloch Sphere Quantum IDE
-5. <span class='term-highlight'>EcoPulse</span> — Environmental Data Analytics Platform
+1. <span class='term-highlight'>KMap</span> — Interactive Karnaugh Map solver, Boolean minimizer & logic circuit synthesizer
+2. <span class='term-highlight'>QuantumCode</span> — Educational quantum computing IDE with live Bloch sphere visualizer
 <br>Tip: Click any project card on the page to view detailed live interactive modal!
 `;
   }
