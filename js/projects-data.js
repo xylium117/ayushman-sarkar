@@ -11,7 +11,7 @@ window.PROJECTS_DATA = [
     stats: {
       variables: "2–4 Variables",
       minimization: "Quine-McCluskey",
-      synthesis: "AND / NAND / NOR"
+      synthesis: "Basic Gates / Universal Gates"
     },
     tags: ["Java", "Swing / AWT", "Boolean Algebra", "Quine-McCluskey", "Digital Logic"],
     overview: "An interactive desktop Karnaugh Map solver and Boolean algebra minimization engine featuring real-time matrix state manipulation, Petrick's minimal cover algorithm, truth table inspection, and 2-level logic circuit diagram synthesis.",
