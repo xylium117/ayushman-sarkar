@@ -71,38 +71,50 @@ window.PROJECTS_DATA = [
   {
     id: "ecopulse",
     title: "EcoPulse",
-    tagline: "Planetary climate analytics engine with multi-spectral vegetation tracking, carbon flux anomaly alerts & deep learning wildfire segmentation",
+    tagline: "Planetary climate & multi-hazard intelligence platform with dual-engine wildfire burn scar & flash flood inundation AI",
     category: "ai",
     categoryLabel: "Climate & Geospatial AI",
     image: "assets/images/project_ecopulse.jpg",
-    featured: false,
+    featured: true,
     stats: {
       resolution: "10m Resolution",
-      sensors: "Sentinel-2 & Landsat",
-      model: "Spatio-Temporal U-Net"
+      sensors: "Sentinel-1 SAR, Sentinel-2 & Landsat",
+      model: "Dual Spatio-Temporal U-Net & Hydrology Regressor"
     },
     tags: [
       "Python",
       "FastAPI",
       "TensorFlow",
+      "Sentinel-1 SAR",
+      "Sentinel-2 MSI",
       "Google Earth Engine",
       "Leaflet",
       "Mapbox GL",
-      "Remote Sensing"
+      "Remote Sensing",
+      "Hydrological AI"
     ],
-    overview: "An interactive planetary climate analytics engine and environmental monitoring platform featuring multi-spectral NDVI/NDWI tracking, real-time carbon flux anomaly detection, agricultural drought risk modeling (VCI), and spatio-temporal deep learning burn scar segmentation over Sentinel-2 and Landsat imagery.",
+    overview: "An interactive planetary climate analytics and multi-hazard observation platform featuring dual operational modes: wildfire burn-scar segmentation with carbon flux tracking and VCI drought modeling, paired with multi-modal flash flood inundation modeling (SAR backscatter attenuation + MNDWI) and a 12-factor hydrological basin regressor trained on empirical planetary flood telemetry.",
     highlights: [
-      "Developed Spatio-Temporal U-Net with ConvLSTM2D bottlenecks to segment wildfire burn scars and canopy loss across multi-spectral temporal granules.",
-      "Integrated Google Earth Engine API with high-fidelity deterministic synthetic fallback for real-time NDVI, NDWI, and carbon flux time series analysis.",
-      "Built dynamic XYZ raster tile streaming pipeline generating real-time multi-spectral planetary overlays (NDVI, carbon flux, drought VCI, burn scars).",
-      "Engineered dual-engine geospatial UI combining zero-key Open Satellite Leaflet rendering with Mapbox 3D atmospheric globe visualizations."
+      "Engineered Dual Planetary Engines toggling between Wildfire & Biomass Loss (optical delta-NBR / canopy loss) and Flash Flood & Inundation (cloud-penetrating Sentinel-1 SAR + MNDWI).",
+      "Developed Spatio-Temporal U-Net with ConvLSTM2D temporal bottlenecks to segment wildfire burn scars, canopy loss, and flood inundation across multi-spectral temporal observation pairs.",
+      "Integrated Google Earth Engine API with high-fidelity deterministic synthetic fallback for real-time NDVI, NDWI, and carbon flux time series analysis with ±2.0σ Z-score anomaly detection.",
+      "Built interactive VCI (Vegetation Condition Index) agricultural drought simulator and soil moisture vulnerability analyzer with real-time sensitivity controls.",
+      "Trained multivariate ridge-regularized hydrological regressor on 150,000+ planetary basin records (R² = 0.845) across 12 watershed parameters including monsoon intensity, drainage topography, and deforestation.",
+      "Calibrated real-world disaster scene presets (California Camp Fire, Amazon Rainforest, Borneo Peatlands, Nepal & Tibet, India Indo-Gangetic Basin, Valencia DANA, Bangladesh Delta) alongside dynamic live viewport scanning.",
+      "Designed dynamic 5-tier AI hazard severity grading (Critical, High, Medium, Low, None) with automated marine water-body classification to suppress false positives in ocean zones.",
+      "Built dynamic XYZ multi-spectral raster tile streaming pipeline generating real-time planetary overlays for NDVI, carbon flux, drought VCI, burn severity, FFSI, and inundation extent.",
+      "Engineered dual-engine geospatial UI combining zero-key Open Satellite Leaflet rendering with Mapbox 3D atmospheric globe visualizations, floating map tools (zoom lock, quick dashboard toggles, dark popups), and mobile landscape support."
     ],
     metrics: [
-      { label: "Spatial Resolution", value: "10m / 30m", detail: "Sentinel-2 MSI & Landsat-8/9 OLI reflectance" },
-      { label: "Tile Stream Latency", value: "< 32ms", detail: "Dynamic XYZ multi-spectral raster streaming" },
-      { label: "Planetary Coverage", value: "4,280 Mha", detail: "8 global biomes across major forest basins" },
-      { label: "Model Inference", value: "~120ms", detail: "Spatio-temporal U-Net burn scar segmentation" },
-      { label: "Anomaly Sensitivity", value: "±2.0σ Z-Score", detail: "Statistical anomaly flagging against seasonal baselines" }
+      { label: "Spatial Resolution", value: "10m / 30m", detail: "Sentinel-1 C-Band SAR, Sentinel-2 MSI & Landsat-8/9 OLI" },
+      { label: "Tile Stream Latency", value: "< 28ms", detail: "Dynamic XYZ multi-spectral & radar raster tile streaming" },
+      { label: "Hydrology Model Accuracy", value: "R² = 0.845", detail: "12-parameter ridge regressor on empirical basin telemetry" },
+      { label: "Model Inference", value: "110ms", detail: "Spatio-Temporal ConvLSTM2D U-Net segmentation" },
+      { label: "Anomaly Sensitivity", value: "±2.0σ Z-Score", detail: "Statistical anomaly flagging against seasonal baselines" },
+      { label: "Planetary Coverage", value: "4,820 Mha", detail: "Global coverage across 9 biomes with automated ocean masking" },
+      { label: "Hazard Classification", value: "5-Tier Dynamic", detail: "Multi-factor Critical to Zero-Risk severity grading" },
+      { label: "Spectral & Radar Indices", value: "6 Live Pipelines", detail: "NDVI, NDWI, MNDWI, SAR delta-dB, VCI drought & delta-NBR" },
+      { label: "Training Dataset", value: "150K+ Samples", detail: "Empirical basin observations across 12 climate & terrain variables" }
     ],
     links: {
       demo: "https://xylium117.github.io/ecopulse/",
