@@ -114,7 +114,7 @@ window.PROJECTS_DATA = [
       { label: "Planetary Coverage", value: "4,820 Mha", detail: "Global coverage across 9 biomes with automated ocean masking" },
       { label: "Hazard Classification", value: "5-Tier Dynamic", detail: "Multi-factor Critical to Zero-Risk severity grading" },
       { label: "Spectral & Radar Indices", value: "6 Live Pipelines", detail: "NDVI, NDWI, MNDWI, SAR delta-dB, VCI drought & delta-NBR" },
-      { label: "Training Dataset", value: "150K+ Samples", detail: "Empirical basin observations across 12 climate & terrain variables" }
+      { label: "Training Dataset", value: "1.1M+ Samples", detail: "Empirical basin observations across 12 climate & terrain variables" }
     ],
     links: {
       demo: "https://xylium117.github.io/ecopulse/",
