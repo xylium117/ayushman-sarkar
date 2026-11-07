@@ -113,7 +113,6 @@ window.PROJECTS_DATA = [
       { label: "Model Inference", value: "< 50ms", detail: "Spatio-Temporal ConvLSTM2D U-Net & closed-form physics" },
       { label: "Anomaly Sensitivity", value: "±2.0σ Z-Score", detail: "Statistical anomaly flagging against seasonal baselines" },
       { label: "Planetary Coverage", value: "4,820 Mha", detail: "Global coverage across 9 biomes with automated ocean masking" },
-      { label: "Hazard Classification", value: "5-Tier Dynamic", detail: "Multi-factor Critical to Zero-Risk severity grading" },
       { label: "Spectral & Radar Indices", value: "7 Live Pipelines", detail: "NDVI, NDWI, MNDWI, SAR delta-dB, VCI drought, delta-NBR & TWI" },
       { label: "Training Corpus Pool", value: "1.14M+ Samples", detail: "1.12M tabular flood records + 20 GDACS GeoTIFFs + 25K depth scenarios" }
     ],
