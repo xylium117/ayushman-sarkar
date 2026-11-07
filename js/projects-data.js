@@ -79,7 +79,7 @@ window.PROJECTS_DATA = [
     stats: {
       resolution: "10m Resolution",
       sensors: "Sentinel-1 SAR, Sentinel-2 & Landsat",
-      model: "Dual Spatio-Temporal U-Net, STURM-FLOOD & Inundation2Depth"
+      model: "Dual ST-UNet · STURM-FLOOD · Inundation2Depth"
     },
     tags: [
       "Python",
@@ -120,6 +120,158 @@ window.PROJECTS_DATA = [
     links: {
       demo: "https://xylium117.github.io/ecopulse/",
       github: "https://github.com/xylium117/ecopulse"
+    }
+  },
+  {
+    id: "kharcha",
+    title: "Kharcha",
+    tagline: "Pocket money tracker for students — log expenses, set budgets, split bills, and let Stash the owl talk you out of bad buys.",
+    category: "web",
+    categoryLabel: "Web & Full-Stack",
+    image: "assets/images/project_kharcha.png",
+    featured: true,
+    stats: {
+      platform: "PWA (Installable)",
+      sync: "IndexedDB + Firestore",
+      ai: "Stash AI"
+    },
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Firebase 13",
+      "Dexie / IndexedDB",
+      "Serwist PWA",
+      "Framer Motion",
+      "Recharts",
+      "Vitest",
+      "Zod"
+    ],
+    overview: "A privacy-first Progressive Web App for student pocket-money management — log expenses in one tap or natural text, visualise spending habits, set savings goals, split bills with friends, and consult Stash the owl AI before impulse purchases. All financial data lives locally in IndexedDB; cloud sync with Google / Firestore is fully opt-in.",
+    highlights: [
+      "Architected offline-first data layer with Dexie (IndexedDB) and debounced, atomic Firestore cloud sync triggered on change, every 2.5 min, on tab focus, and on network reconnect.",
+      "Built multi-backend Stash AI mentor supporting Google Gemini, Groq, OpenRouter, and a 100% offline zero-key local reasoning engine trained on student finance with natural-language expense parsing.",
+      "Engineered season-aware budget engine with SCS-CN-style runoff forecasting, month-end spend projection, and dynamic Normal / Academic / Vacation period switching.",
+      "Designed a 14-badge gamification system rewarding streaks, no-spend days, goal completions, and behavioural milestones with confetti unlock animations.",
+      "Implemented installable PWA via Serwist / Workbox service worker with pre-cached assets, offline fallback, and an in-app install prompt flow.",
+      "Delivered interactive Stats Lab with category breakdowns, daily spend sparklines, Tukey outlier detection, Welch t-test weekday vs. weekend spend analytics, and streak tracking using Recharts."
+    ],
+    metrics: [
+      { label: "Stats Lab", value: "10 Core Metrics", detail: "Mean, median, std dev, IQR, 95% CI, Gini index, skewness, Tukey outliers & Welch t-test" },
+      { label: "Expense Categories", value: "10 Categories", detail: "Custom emoji, colours, and Need / Want / Waste tagging" },
+      { label: "Badges", value: "14 Badges", detail: "Unlockable awards for logging streaks, zero-spend days & goal completions" },
+      { label: "Seasonal Budgets", value: "3 Modes", detail: "Adaptive spend forecasting tailored to Normal, Exam, and Vacation semesters" },
+      { label: "Weekly Reports", value: "6 Grades", detail: "Automated A+ to F financial report cards with personalized wins and tips" }
+    ],
+    links: {
+      demo: "https://kharcha-pi.vercel.app",
+      github: "https://github.com/xylium117/kharcha"
+    }
+  },
+  {
+    id: "logiscope",
+    title: "Logiscope.ai",
+    tagline: "Predictive logistics intelligence & decision-support digital twin with spatio-temporal GNN route disruption AI",
+    category: "ai",
+    categoryLabel: "Logistics & Geospatial AI",
+    image: "assets/images/project_logiscope.png",
+    featured: true,
+    stats: {
+      resolution: "Multi-Echelon Network",
+      sensors: "IoT Telemetry, SRTM DEM & Live Weather Feeds",
+      model: "ST-GNN (Edge-GAT + T-GRU) · Linear Programming Solver"
+    },
+    tags: [
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Leaflet GIS",
+      "Graph Neural Networks",
+      "Operations Research",
+      "Digital Twin"
+    ],
+    overview: "A predictive logistics intelligence and tactical command-and-control platform engineered for high-altitude, austere, and geographically vulnerable supply corridors. Features a real-time synchronized logistics digital twin coupled with an inductive Spatio-Temporal Graph Neural Network (Edge-Conditioned Spatial Graph Attention + Temporal GRU) for multi-horizon route impassability forecasting, multivariate time-series demand projections, environmental high-altitude burn modifiers, and mixed-integer linear programming (MILP) dispatch optimization.",
+    highlights: [
+      "Engineered an inductive Spatio-Temporal Graph Neural Network (ST-GNN) combining edge-conditioned Spatial-GAT and Temporal GRUs to forecast route disruption probabilities across multi-horizon tactical windows (T+1h to T+48h).",
+      "Architected a continuously synchronized supply network Digital Twin spanning forward bases, regional transit hubs, and main depots with live IoT telemetry and multi-echelon stock health monitoring.",
+      "Formulated physics-informed high-altitude consumption multipliers adjusting fuel, caloric, and battery drawdowns against elevation gradients, sub-zero freeze drag, and atmospheric hypoxia.",
+      "Built multi-objective Operations Research / Mixed-Integer Linear Programming (MILP) dispatch solvers balancing payload capacity, corridor risk cost surfaces, and transit time SLAs across all-terrain convoys and air bridges.",
+      "Developed an interactive tactical GIS operations map with interactive Leaflet topology overlays, dynamic chokepoint vulnerability heatmaps, elevation profiles, and fallback corridor routing.",
+      "Coupled multivariate time-series demand forecasting engines with seasonal trend decomposition and statistical ±2.5σ Z-score anomaly radar for early stockout and consumption surge detection.",
+      "Designed an interactive Scenario Simulation Lab allowing logistics commanders to model severe shock disruptions (pass closures, blizzards, fuel depot loss) and simulate automated proactive replenishment re-routing.",
+      "Built low-latency REST and WebSocket telemetry ingestion pipelines in FastAPI (< 30ms response) serving route cost matrices and predictive risk indices to a modern React 19 / TypeScript command dashboard."
+    ],
+    metrics: [
+      { label: "ST-GNN Disruption ROC-AUC", value: "0.948", detail: "Multi-horizon route impassability & pass closure classifier (F1 = 0.912)" },
+      { label: "ETA Prediction MAE", value: "0.42 hrs", detail: "Mean absolute ETA error vs 2.85 hrs for static geodesic routing" },
+      { label: "Routing Latency", value: "< 24ms", detail: "FastAPI vectorized dynamic risk cost surface C_uv(t) & Dijkstra solver" },
+      { label: "Projection Horizon", value: "48 Hours", detail: "5 discrete tactical forecast heads (T+1h, T+6h, T+12h, T+24h, T+48h)" },
+      { label: "Graph Feature Tensor", value: "14 Dimensions", detail: "8D spatial node vectors (X_t) + 6D dynamic edge tensors (E_t)" },
+      { label: "Anomaly Sensitivity", value: "±3.0σ Z-Score", detail: "Statistical Gaussian divergence radar flagging stock & telemetry spikes" },
+      { label: "Lead-Time Buffer Gain", value: "68 Hours", detail: "Pre-positioning advance notice prior to severe seasonal pass closures" },
+      { label: "Mission Readiness Gain", value: "+35%", detail: "Combat readiness retention benchmark via MILP forward pre-positioning" },
+      { label: "Fleet Capacity Managed", value: "280+ Tons", detail: "Multi-modal dispatch across heavy convoys (160T), trucks (75T) & air (45T)" }
+    ],
+    links: {
+      demo: "https://xylium117.github.io/logiscope.ai/",
+      github: "https://github.com/xylium117/logiscope.ai"
+    }
+  },
+  {
+    id: "hattrk",
+    title: "Hattrk",
+    tagline: "Data-driven spatial football match engine & probabilistic Monte Carlo predictor with 18-zone pitch geometry, continuous possession, and Opta xG calibration",
+    category: "ai",
+    categoryLabel: "Sports Analytics & Predictive AI",
+    image: "assets/images/project_hattrk.png",
+    featured: true,
+    stats: {
+      resolution: "18-Zone Tactical Pitch Grid",
+      sensors: "Opta / StatsBomb Benchmark Telemetry",
+      model: "Continuous Possession State Machine · Bradley-Terry Elo · Opta xG"
+    },
+    tags: [
+      "Python",
+      "Sports Analytics",
+      "Monte Carlo Simulation",
+      "Expected Goals (xG)",
+      "Spatial Pitch Geometry",
+      "Tactical AI",
+      "Elo Rating Systems",
+      "Pytest",
+      "Biomechanical Modeling"
+    ],
+    overview: "A high-fidelity data-driven football match simulation and probabilistic match outcome prediction engine. Powered by an 18-zone tactical pitch grid, continuous micro-possession state machines across 4 match phases, dynamic game-state urgency AI, Opta-calibrated expected goals (xG/xA) with defender shot-blocking, and a 444-club Bradley-Terry Elo framework capable of running 1,000-iteration headless Monte Carlo predictions (RPS = 0.174).",
+    highlights: [
+      "Engineered an 18-zone spatial pitch grid dividing the pitch into vertical thirds and horizontal channels (wings, half-spaces, central channels) to model passing lanes, defensive block compression, and spatial overload dynamics.",
+      "Developed a continuous phase-based micro-possession state machine (Build-up, Progression, Final Third, Transition) processing 2–4 micro-ticks per minute to achieve authentic match pass volumes (893 completed passes/match at 88.3% accuracy).",
+      "Calibrated an Opta-standard expected goals (xG) and assists (xA) engine integrating defender shot-blocking (25%–35% block rate), goalkeeper save resistance, and parried deflections, dropping shots on target from an unrealistic 54% to an authentic 36.3%.",
+      "Built dynamic Game-State AI manager adjusting pressing triggers, passing risk, and five tactical mentalities (Park the Bus, Controlled Counter, Balanced, Attacking Overload, Hail Mary) based on real-time clock urgency and score differential.",
+      "Formulated anti-blowout lead retention and underdog low-block compression that dropped 3+ goal blowouts from 47.0% to 17.0% and completely eliminated unrealistic runaway 5+ goal demolitions.",
+      "Engineered headless high-speed Monte Carlo predictor executing 1,000+ match simulations head-to-head to extract probability distributions: 1X2 win probabilities, exact scoreline matrices, Over/Under (1.5, 2.5, 3.5), BTTS, and anytime goalscorer props.",
+      "Coupled 444-club Bradley-Terry Elo power ratings, goal difference anchor formulas, rolling 5-match form parsing (WWDDL), and tactical philosophy friction matrices (High Press vs Tiki-Taka, Direct Counter vs Possession).",
+      "Designed tactical familiarity and team fluidity systems evaluating player positional comfort and squad cohesion across flexible formation archetypes (4-3-3, 4-2-3-1, 3-5-2, 5-3-2).",
+      "Curated a comprehensive database covering 444 global football clubs, authentic stadium venues, and 2-column manager profiles mapped directly from Wikipedia.",
+      "Constructed a modular 39-test automated pytest suite verifying spatial pitch geometry, game-state urgency, tactical matchups, data integrity, and statistical realism benchmarks across 30+ simulated fixtures."
+    ],
+    metrics: [
+      { label: "Passes Completed", value: "893 / Match", detail: "88.3% pass accuracy across 100-match benchmark (750–950 real target)" },
+      { label: "Total Goals / Match", value: "2.74 Goals", detail: "Calibrated to Opta standard (2.65–3.10 real average, xG divergence = 0.04)" },
+      { label: "Blowout Rate", value: "17.0%", detail: "3+ goal blowouts compressed from 47.0% down to 17.0% (0% demolitions)" },
+      { label: "Predictor Accuracy", value: "RPS = 0.174", detail: "Ensemble Ranked Probability Score beating the <= 0.188 benchmark target" },
+      { label: "Simulation Speed", value: "< 8ms / Match", detail: "Headless batch simulation throughput for 1,000-run Monte Carlo ensembles" },
+      { label: "Club & Squad Database", value: "444 Clubs", detail: "Global clubs with authentic venues, manager mappings, and player rosters" },
+      { label: "Shot Conversion", value: "29.9% G/SoT", detail: "36.3% shots on target with 25.2 total shots/match mirroring UCL data" },
+      { label: "Discipline & Corners", value: "21.2 Fouls", detail: "3.84 yellow cards and 11.4 corners per match from deflections and saves" },
+      { label: "Test Suite Pass Rate", value: "39 / 39 (100%)", detail: "Comprehensive pytest suite covering realism, grid, tactics, elo, and data" }
+    ],
+    links: {
+      demo: "https://github.com/xylium117/hattrk",
+      github: "https://github.com/xylium117/hattrk"
     }
   }
 ];
