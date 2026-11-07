@@ -496,6 +496,18 @@ function initProjectSystem() {
 
   if (!container || !window.PROJECTS_DATA) return;
 
+  // Dynamically update total project count in filter button
+  const allProjectsBtn = document.querySelector('.filter-btn[data-category="all"]');
+  if (allProjectsBtn) {
+    const countSpan = allProjectsBtn.querySelector(".filter-count");
+    const countText = `(${window.PROJECTS_DATA.length})`;
+    if (countSpan) {
+      countSpan.textContent = countText;
+    } else {
+      allProjectsBtn.textContent = `All Projects ${countText}`;
+    }
+  }
+
   function renderProjects(filter = "all") {
     container.innerHTML = "";
 
