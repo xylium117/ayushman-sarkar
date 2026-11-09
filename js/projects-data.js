@@ -223,7 +223,7 @@ window.PROJECTS_DATA = [
   {
     id: "hattrk",
     title: "Hattrk",
-    tagline: "Data-driven spatial football match engine & probabilistic Monte Carlo predictor with 18-zone pitch geometry, continuous possession, and Opta xG calibration",
+    tagline: "Data-driven spatial football match engine with 18-zone pitch geometry, matchday physics, domestic league simulation, and multi-continental cup season simulator",
     category: "ai",
     categoryLabel: "Sports Analytics & Predictive AI",
     image: "assets/images/project_hattrk.png",
@@ -231,7 +231,7 @@ window.PROJECTS_DATA = [
     stats: {
       resolution: "18-Zone Tactical Pitch Grid",
       sensors: "Opta / StatsBomb Benchmark Telemetry",
-      model: "Continuous Possession State Machine · Bradley-Terry Elo · Opta xG"
+      model: "Continuous Possession State Machine · Bradley-Terry Elo · Opta xG · Matchday Physics · 65-League & Cup Simulator"
     },
     tags: [
       "Python",
@@ -241,21 +241,25 @@ window.PROJECTS_DATA = [
       "Spatial Pitch Geometry",
       "Tactical AI",
       "Elo Rating Systems",
-      "Pytest",
+      "Domestic League Simulation",
+      "Continental Tournament Simulation",
       "Biomechanical Modeling"
     ],
-    overview: "A high-fidelity data-driven football match simulation and probabilistic match outcome prediction engine. Powered by an 18-zone tactical pitch grid, continuous micro-possession state machines across 4 match phases, dynamic game-state urgency AI, Opta-calibrated expected goals (xG/xA) with defender shot-blocking, and a 444-club Bradley-Terry Elo framework capable of running 1,000-iteration headless Monte Carlo predictions (RPS = 0.174).",
+    overview: "A high-fidelity data-driven football match simulation and probabilistic prediction engine spanning individual matches to full multi-continental seasons. Powered by an 18-zone tactical pitch grid, continuous micro-possession state machines across 4 match phases, dynamic game-state urgency AI, and an Opta-calibrated xG/xA model with defender shot-blocking. The matchday physics engine layers referee personality profiles, VAR review mechanics, environmental weather conditions, and set-piece choreography onto every simulated fixture. A 745-club database across 65 domestic leagues drives a double round-robin league simulator with rolling form standings, feeding into a multi-continental season simulator supporting UCL, UEL, UECL, UWCL, Copa Libertadores, Copa Sudamericana, CONCACAF Champions Cup, AFC Champions Elite, and CAF Champions League. The Monte Carlo predictor (1,000 iterations, RPS = 0.174) now also outputs probabilistic league finish distributions.",
     highlights: [
       "Engineered an 18-zone spatial pitch grid dividing the pitch into vertical thirds and horizontal channels (wings, half-spaces, central channels) to model passing lanes, defensive block compression, and spatial overload dynamics.",
       "Developed a continuous phase-based micro-possession state machine (Build-up, Progression, Final Third, Transition) processing 2–4 micro-ticks per minute to achieve authentic match pass volumes (893 completed passes/match at 88.3% accuracy).",
       "Calibrated an Opta-standard expected goals (xG) and assists (xA) engine integrating defender shot-blocking (25%–35% block rate), goalkeeper save resistance, and parried deflections, dropping shots on target from an unrealistic 54% to an authentic 36.3%.",
       "Built dynamic Game-State AI manager adjusting pressing triggers, passing risk, and five tactical mentalities (Park the Bus, Controlled Counter, Balanced, Attacking Overload, Hail Mary) based on real-time clock urgency and score differential.",
       "Formulated anti-blowout lead retention and underdog low-block compression that dropped 3+ goal blowouts from 47.0% to 17.0% and completely eliminated unrealistic runaway 5+ goal demolitions.",
-      "Engineered headless high-speed Monte Carlo predictor executing 1,000+ match simulations head-to-head to extract probability distributions: 1X2 win probabilities, exact scoreline matrices, Over/Under (1.5, 2.5, 3.5), BTTS, and anytime goalscorer props.",
-      "Coupled 444-club Bradley-Terry Elo power ratings, goal difference anchor formulas, rolling 5-match form parsing (WWDDL), and tactical philosophy friction matrices (High Press vs Tiki-Taka, Direct Counter vs Possession).",
-      "Designed tactical familiarity and team fluidity systems evaluating player positional comfort and squad cohesion across flexible formation archetypes (4-3-3, 4-2-3-1, 3-5-2, 5-3-2).",
-      "Curated a comprehensive database covering 444 global football clubs, authentic stadium venues, and 2-column manager profiles mapped directly from Wikipedia.",
-      "Constructed a modular 39-test automated pytest suite verifying spatial pitch geometry, game-state urgency, tactical matchups, data integrity, and statistical realism benchmarks across 30+ simulated fixtures."
+      "Engineered headless high-speed Monte Carlo predictor executing 1,000+ match simulations head-to-head to extract probability distributions: 1X2 win probabilities, exact scoreline matrices, Over/Under (1.5, 2.5, 3.5), BTTS, anytime goalscorer props, and probabilistic league finish distributions.",
+      "Coupled 745-club Bradley-Terry Elo power ratings across 65 domestic leagues, goal difference anchor formulas, rolling 5-match form parsing (WWDDL), and tactical philosophy friction matrices (High Press vs Tiki-Taka, Direct Counter vs Possession).",
+      "Designed a matchday physics engine with four set-piece choreography routines (near-post flick, far-post overload, goalkeeper screen, short cutback), each driving distinct spatial movement patterns, delivery trajectories, and outcome probability distributions.",
+      "Implemented referee personality profiles (disciplinarian, lenient, crowd-pressure-biased) modulating card thresholds, foul call frequency, and VAR review trigger likelihood, with VAR overturning on-field decisions at calibrated real-world rates.",
+      "Integrated environmental weather physics: Wet/Rain increases pass velocity variance by 12%, Heat applies a 20% stamina decay multiplier to sprinting actions, and Snow reduces ground pass accuracy by 15%, affecting zone transition probabilities throughout the match.",
+      "Calibrated player and match rating system to real-world distributions: 10.0 reserved for historic individual performances (4+ goals or 11+ saves in a clean sheet), normal starters range 5.8–6.8, and MOTM performances cluster 8.0–8.8.",
+      "Built a domestic league engine supporting 65 leagues and 745 clubs across 6 continents with double round-robin scheduling, real-time rolling standings (GD, GF tiebreakers), dynamic team and player form tracking, and promotion/relegation slot resolution.",
+      "Architected a multi-continental season simulator orchestrating parallel domestic campaigns alongside 9 continental cup competitions (UCL, UEL, UECL, UWCL, Copa Libertadores, Copa Sudamericana, CONCACAF Champions Cup, AFC Champions Elite, CAF Champions League) configurable by continent selection and number of seasons."
     ],
     metrics: [
       { label: "Passes Completed", value: "893 / Match", detail: "88.3% pass accuracy across 100-match benchmark (750–950 real target)" },
@@ -266,10 +270,10 @@ window.PROJECTS_DATA = [
       { label: "Club & Squad Database", value: "444 Clubs", detail: "Global clubs with authentic venues, manager mappings, and player rosters" },
       { label: "Shot Conversion", value: "29.9% G/SoT", detail: "36.3% shots on target with 25.2 total shots/match mirroring UCL data" },
       { label: "Discipline & Corners", value: "21.2 Fouls", detail: "3.84 yellow cards and 11.4 corners per match from deflections and saves" },
-      { label: "Test Suite Pass Rate", value: "39 / 39 (100%)", detail: "Comprehensive pytest suite covering realism, grid, tactics, elo, and data" }
+      { label: "Test Suite Pass Rate", value: "59 / 59 (100%)", detail: "Full coverage across engine, matchday physics, ratings, league simulation, and continental season tests" }
     ],
     links: {
-      demo: "https://github.com/xylium117/hattrk",
+      demo: "https://github.com/xylium117/hattrk/wiki",
       github: "https://github.com/xylium117/hattrk"
     }
   }
